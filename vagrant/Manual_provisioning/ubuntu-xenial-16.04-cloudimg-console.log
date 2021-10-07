@@ -1,0 +1,309 @@
+[  537.080043] INFO: rcu_sched detected stalls on CPUs/tasks:
+[  537.083334] 	1-...: (19 ticks this GP) idle=2d7/140000000000000/0 softirq=782/783 fqs=59 
+[  537.083334] 	(detected by 0, t=131713 jiffies, g=-105, c=-106, q=9)
+[  537.083334] Task dump for CPU 1:
+[  537.083334] modprobe        R  running task        0   233    219 0x00000008
+[  537.083334]  0000000000000286 0000000000000001 0000000000000005 ffffffff811fa195
+[  537.083334]  0000000000000001 ffffffffc00540c0 0000000000000018 32edebbdf699a564
+[  537.083334]  ffffffffc00540c0 0000000000000001 ffff88003c2048c0 ffffffffc00540c0
+[  537.083334] Call Trace:
+[  537.083334]  [<ffffffff811fa195>] ? kmem_cache_alloc_trace+0x185/0x1f0
+[  537.083334]  [<ffffffff8185a350>] ? do_init_module+0x5f/0x1da
+[  537.083334]  [<ffffffff8111254c>] ? load_module+0x171c/0x1c80
+[  537.083334]  [<ffffffff8110e9d0>] ? __symbol_put+0x60/0x60
+[  537.083334]  [<ffffffff81222b50>] ? kernel_read+0x50/0x80
+[  537.083334]  [<ffffffff81112cf4>] ? SYSC_finit_module+0xb4/0xe0
+[  537.083334]  [<ffffffff81112d3e>] ? SyS_finit_module+0xe/0x10
+[  537.083334]  [<ffffffff8186bb5b>] ? entry_SYSCALL_64_fastpath+0x22/0xd0
+[  537.083334] rcu_sched kthread starved for 98129 jiffies! g18446744073709551511 c18446744073709551510 f0x0 s3 ->state=0x1
+[  537.272783]    generic_sse: -1237012.-256 MB/sec
+[  537.279126] xor: using function: prefetch64-sse (129411.000 MB/sec)
+[  537.289851] async_tx: api initialized (async)
+[  537.351897] md: raid6 personality registered for level 6
+[  537.358442] md: raid5 personality registered for level 5
+[  537.364398] md: raid4 personality registered for level 4
+[  537.402601] md: raid10 personality registered for level 10
+done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... [  537.514294] Btrfs loaded
+Scanning for Btrfs filesystems
+done.
+Warning: fsck not present, so skipping root file system
+[  537.580311] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
+[  537.586377] EXT4-fs (sda1): write access will be enabled during recovery
+[  537.642568] EXT4-fs (sda1): recovery complete
+[  537.649509] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+[  537.916828] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[  537.939967] systemd[1]: Detected virtualization oracle.
+[  537.946298] systemd[1]: Detected architecture x86-64.
+
+Welcome to [1mUbuntu 16.04.7 LTS[0m!
+
+[  537.963304] systemd[1]: Set hostname to <web01>.
+[  538.208804] systemd[1]: Reached target Swap.
+[[0;32m  OK  [0m] Reached target Swap.
+[  538.228123] systemd[1]: Listening on LVM2 metadata daemon socket.
+[[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
+[  538.252742] systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on Journal Socket.
+[  538.268803] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[[0;32m  OK  [0m] Set up automount Arbitrary Executab...ats File System Automount Point.
+[  538.293469] systemd[1]: Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on Syslog Socket.
+[  538.310357] systemd[1]: Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+[  538.331065] systemd[1]: Reached target Encrypted Volumes.
+[[0;32m  OK  [0m] Reached target Encrypted Volumes.
+[  538.361347] systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
+[  538.395850] systemd[1]: Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[  538.431594] systemd[1]: Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice User and Session Slice.
+[  538.466710] systemd[1]: Created slice System Slice.
+[[0;32m  OK  [0m] Created slice System Slice.
+[  538.508980] systemd[1]: Mounting Debug File System...
+         Mounting Debug File System...
+[  538.529811] systemd[1]: Mounting Huge Pages File System...
+         Mounting Huge Pages File System...
+[  538.550739] systemd[1]: Reached target Slices.
+[[0;32m  OK  [0m] Reached target Slices.
+[  538.574962] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+[  538.617781] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required st... nodes for the current kernel...
+[  538.660947] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[  538.687031] systemd[1]: Started Trigger resolvconf update for networkd DNS.
+[  538.698040] Loading iSCSI transport class v2.0-870.
+[[0;32m  OK  [0m] Started Trigger resolvconf update for networkd DNS.
+[  538.720961] systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting POSIX Message Queue File System...
+[  538.748764] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[  538.762137] iscsi: registered transport (tcp)
+[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
+[  538.792629] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+         Starting Monitoring of LVM2 mirrors... dmeventd or progress polling...
+[  538.856803] systemd[1]: Starting Uncomplicated firewall...
+         Starting Uncomplicated firewall...
+[  538.892272] systemd[1]: Reached target User and Group Name Lookups.
+[[0;32m  OK  [0m] Reached target User and Group Name Lookups.
+[  538.908285] systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+[  538.949066] systemd[1]: Starting Nameserver information manager...
+         Starting Nameserver information manager...
+[  538.966924] systemd[1]: Listening on LVM2 poll daemon socket.
+[[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.[  538.982022] iscsi: registered transport (iser)
+
+[  538.986090] systemd[1]: Listening on fsck to fsckd communication Socket.
+[[0;32m  OK  [0m] Listening on fsck to fsckd communication Socket.
+[  539.009165] systemd[1]: Starting File System Check on Root Device...
+[  539.017463] random: nonblocking pool is initialized
+         Starting File System Check on Root Device...
+[  539.032464] systemd[1]: Listening on Journal Audit Socket.
+[[0;32m  OK  [0m] Listening on Journal Audit Socket.
+[  539.052597] systemd[1]: Starting Journal Service...
+         Starting Journal Service...
+[  539.081518] systemd[1]: Starting Set console keymap...
+         Starting Set console keymap...
+[  539.097633] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+[  539.118661] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+[  539.149258] systemd[1]: Mounted POSIX Message Queue File System.
+[[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
+[  539.163021] systemd[1]: Mounted Debug File System.
+[[0;32m  OK  [0m] Mounted Debug File System.
+[  539.174480] systemd[1]: Mounted Huge Pages File System.
+[[0;32m  OK  [0m] Mounted Huge Pages File System.
+[  539.186853] systemd[1]: Started Journal Service.
+[[0;32m  OK  [0m] Started Journal Service.
+[[0;32m  OK  [0m] Started Create list of required sta...ce nodes for the current kernel.
+[[0;32m  OK  [0m] Started Load Kernel Modules.
+[[0;32m  OK  [0m] Started Uncomplicated firewall.
+[[0;32m  OK  [0m] Started File System Check on Root Device.
+[[0;32m  OK  [0m] Started Set console keymap.
+[[0;32m  OK  [0m] Started Nameserver information manager.
+[[0;32m  OK  [0m] Started LVM2 metadata daemon.
+[[0;32m  OK  [0m] Started File System Check Daemon to report status.
+         Starting Remount Root and Kernel File Systems...
+[  539.388533] EXT4-fs (sda1): re-mounted. Opts: (null)
+         Mounting FUSE Control File System...
+         Starting Apply Kernel Variables...
+         Starting Create Static Device Nodes in /dev...
+[[0;32m  OK  [0m] Mounted FUSE Control File System.
+[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Started Apply Kernel Variables.
+[[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+         Starting Flush Journal to Persistent Storage...
+         Starting Load/Save Random Seed...
+         Starting udev Coldplug all Devices...
+[[0;32m  OK  [0m] Started udev Kernel Device Manager.
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+[[0;32m  OK  [0m] Started udev Coldplug all Devices.
+[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Started Monitoring of LVM2 mirrors,...ng dmeventd or progress polling.
+[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
+[[0;32m  OK  [0m] Reached target Local File Systems.
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Create Volatile Files and Directories...
+         Starting Initial cloud-init job (pre-networking)...
+         Starting LSB: AppArmor initialization...
+         Starting Set console font and keymap...
+[[0;32m  OK  [0m] Started Tell Plymouth To Write Out Runtime Data.
+[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Found device /dev/ttyS0.
+[[0;32m  OK  [0m] Started LSB: AppArmor initialization.
+         Starting Load AppArmor profiles managed internally by snapd...
+[[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[[0;32m  OK  [0m] Started Load AppArmor profiles managed internally by snapd.
+[[0;32m  OK  [0m] Found device 82540EM Gigabit Ethern...r (PRO/1000 MT Desktop Adapter).
+[[0;32m  OK  [0m] Found device 82540EM Gigabit Ethern...r (PRO/1000 MT Desktop Adapter).
+[  542.439189] cloud-init[488]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 running 'init-local' at Wed, 06 Oct 2021 10:09:45 +0000. Up 541.96 seconds.
+[[0;32m  OK  [0m] Started Initial cloud-init job (pre-networking).
+[[0;32m  OK  [0m] Reached target Network (Pre).
+[[0;32m  OK  [0m] Started ifup for enp0s3.
+         Starting Raise network interfaces...
+[[0;32m  OK  [0m] Started ifup for enp0s8.
+[[0;32m  OK  [0m] Started Set console font and keymap.
+[[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Started Raise network interfaces.
+[[0;32m  OK  [0m] Reached target Network.
+         Starting Initial cloud-init job (metadata service crawler)...
+[  544.631640] cloud-init[1058]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 running 'init' at Wed, 06 Oct 2021 10:09:47 +0000. Up 544.37 seconds.
+[  544.650460] cloud-init[1058]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+[  544.670092] cloud-init[1058]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[  544.681770] cloud-init[1058]: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |
+[  544.693661] cloud-init[1058]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[  544.705186] cloud-init[1058]: ci-info: | enp0s3 | True |          10.0.2.15          | 255.255.255.0 | global | 02:a6:aa:55:78:b9 |
+[[  544.723411] cloud-init[1058]: ci-info: | enp0s3 | True |  fe80::a6:aaff:fe55:78b9/64 |       .       |  link  | 02:a6:aa:55:78:b9 |
+[  544.726175] cloud-init[1058]: ci-info: | enp0s8 | True |        192.168.33.11        | 255.255.255.0 | global | 08:00:27:88:8b:44 |
+[  544.726620] cloud-init[1058]: ci-info: | enp0s8 | True | fe80::a00:27ff:fe88:8b44/64 |       .       |  link  | 08:00:27:88:8b:44 |
+[  544.727071] cloud-init[1058]: ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[  544.727395] cloud-init[1058]: ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |
+[  544.728496] cloud-init[1058]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[  544.728746] cloud-init[1058]: ci-info: ++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++
+[  544.729132] cloud-init[1058]: ci-info: +-------+--------------+----------+---------------+-----------+-------+
+[  544.729654] cloud-init[1058]: ci-info: | Route | Destination  | Gateway  |    Genmask    | Interface | Flags |
+[  544.730018] cloud-init[1058]: ci-info: +-------+--------------+----------+---------------+-----------+-------+
+[  544.730472] cloud-init[1058]: ci-info: |   0   |   0.0.0.0    | 10.0.2.2 |    0.0.0.0    |   enp0s3  |   UG  |
+[  544.730857] cloud-init[1058]: ci-info: |   1   |   10.0.2.0   | 0.0.0.0  | 255.255.255.0 |   enp0s3  |   U   |
+[  544.731316] cloud-init[1058]: ci-info: |   2   | 192.168.33.0 | 0.0.0.0  | 255.255.255.0 |   enp0s8  |   U   |
+[  544.731691] cloud-init[1058]: ci-info: +-------+--------------+----------+---------------+-----------+-------+
+[  544.732430] cloud-init[1058]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[  544.732627] cloud-init[1058]: ci-info: +-------+-------------+---------+-----------+-------+
+[  544.733058] cloud-init[1058]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[  544.733437] cloud-init[1058]: ci-info: +-------+-------------+---------+-----------+-------+
+[  544.733858] cloud-init[1058]: ci-info: |   0   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[  544.734223] cloud-init[1058]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s8  |   U   |
+[  544.734629] cloud-init[1058]: ci-info: |   4   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[  544.735068] cloud-init[1058]: ci-info: |   5   |   ff00::/8  |    ::   |   enp0s8  |   U   |
+[  544.735542] cloud-init[1058]: ci-info: +-------+-------------+---------+-----------+-------+
+[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
+[[0;32m  OK  [0m] Reached target Cloud-config availability.
+[[0;32m  OK  [0m] Reached target System Initialization.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+         Starting LXD - unix socket.
+[[0;32m  OK  [0m] Started ACPI Events Check.
+[[0;32m  OK  [0m] Reached target Paths.
+         Starting Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Started Message of the Day.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
+[[0;32m  OK  [0m] Started Ubuntu Advantage update messaging.
+[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Reached target Network is Online.
+         Starting iSCSI initiator daemon (iscsid)...
+[[0;32m  OK  [0m] Listening on LXD - unix socket.
+[[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Reached target Sockets.
+[[0;32m  OK  [0m] Reached target Basic System.
+         Starting Virtualbox guest utils...
+         Starting System Logging Service...
+         Starting LSB: MD monitoring daemon...
+         Starting LSB: Record successful boot for GRUB...
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+[[0;32m  OK  [0m] Started ACPI event daemon.
+         Starting Login Service...
+[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
+[[0;32m  OK  [0m] Started Deferred execution scheduler.
+         Starting Snap Daemon...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting Accounts Service...
+         Starting OpenBSD Secure Shell server...
+         Starting LXD - container startup/shutdown...
+         Starting /etc/rc.local Compatibility...
+[[0;32m  OK  [0m] Started System Logging Service.
+[[0;32m  OK  [0m] Started iSCSI initiator daemon (iscsid).
+[[0;32m  OK  [0m] Started /etc/rc.local Compatibility.
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Started Login Service.
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Started LSB: MD monitoring daemon.
+[[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
+         Starting Authenticate and Authorize Users to Run Privileged Tasks...
+         Starting Login to default iSCSI targets...
+[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Started Authenticate and Authorize Users to Run Privileged Tasks.
+[[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Started Login to default iSCSI targets.
+[[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
+         Mounting /vagrant...
+[[0;32m  OK  [0m] Mounted /vagrant.
+[[0;32m  OK  [0m] Reached target Remote File Systems.
+         Starting LSB: Set the CPU Frequency Scaling governor to "ondemand"...
+         Starting Permit User Sessions...
+         Starting LSB: automatic crash report generation...
+         Starting LSB: daemon to balance interrupts for SMP systems...
+[[0;32m  OK  [0m] Started Virtualbox guest utils.
+[[0;32m  OK  [0m] Started Permit User Sessions.
+         Starting Ubuntu Advantage APT and MOTD Messages...
+         Starting Message of the Day...
+         Starting Terminate Plymouth Boot Screen...
+         Starting Hold until boot process finishes up...
+[[0;32m  OK  [0m] Started Hold until boot process finishes up.
+[[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started Message of the Day.
+         Starting Set console scheme...
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Started LSB: Set the CPU Frequency Scaling governor to "ondemand".
+[[0;32m  OK  [0m] Started Set console scheme.
+[[0;32m  OK  [0m] Started LSB: daemon to balance interrupts for SMP systems.
+[[0;32m  OK  [0m] Started Snap Daemon.
+         Starting Wait until snapd is fully seeded...
+[[0;32m  OK  [0m] Started LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Created slice User Slice of vagrant.
+         Starting User Manager for UID 1000...
+[[0;32m  OK  [0m] Started Session 1 of user vagrant.
+[[0;32m  OK  [0m] Started User Manager for UID 1000.
+[[0;32m  OK  [0m] Started Wait until snapd is fully seeded.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+[[0;32m  OK  [0m] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+         Starting Apply the settings specified in cloud-config...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+[[0;32m  OK  [0m] Started Ubuntu Advantage APT and MOTD Messages.
+[  548.301578] cloud-init[1357]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 running 'modules:config' at Thu, 07 Oct 2021 05:41:13 +0000. Up 548.20 seconds.
+[[0;32m  OK  [0m] Started Apply the settings specified in cloud-config.
+         Starting Execute cloud user/final scripts...
+[  549.078067] cloud-init[1425]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 running 'modules:final' at Thu, 07 Oct 2021 05:41:13 +0000. Up 548.86 seconds.
+[  549.091614] cloud-init[1425]: Cloud-init v. 21.1-19-gbad84ad4-0ubuntu1~16.04.2 finished at Thu, 07 Oct 2021 05:41:13 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 549.07 seconds
+[[0;32m  OK  [0m] Started Execute cloud user/final scripts.
+[[0;32m  OK  [0m] Reached target Cloud-init target.
+
+Ubuntu 16.04.7 LTS web01 ttyS0
+
+web01 login: 
